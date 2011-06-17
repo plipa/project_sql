@@ -4,4 +4,8 @@ class ProjectsController < ApplicationController
 
   end
 
+  def list
+    @projects =Projects.find_all_by_name :name
+  end
+
 end

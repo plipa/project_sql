@@ -1,5 +1,6 @@
 ProjectSql::Application.routes.draw do
   get "projects/new"
+  get "projects/list"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

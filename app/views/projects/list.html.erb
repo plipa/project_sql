@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>All Projects</title>
+</head>
+<body>
+
+<h1>All Projects</h1>
+<table border="1">
+ <tr>
+  <td width="80%"><p align="center"><i><b>Nazwa projektu</b></i></td>
+  <td width="20%"><p align="center"><i><b>Opis</b></i></td>
+ </tr>
+
+ <% @projects.each do |projects| %>
+  <tr>
+   <td><%= link_to projects.name, :action => "show" %></td>
+   <td><%= projects.description %></td>
+  </tr>
+ <% end %>
+</table>
+<p><%= link_to "Create new Project", :action => "new" %></p>
+
+</body>
+</html>
