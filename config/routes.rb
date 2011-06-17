@@ -1,6 +1,11 @@
 ProjectSql::Application.routes.draw do
-  get "projects/new"
-  get "projects/list"
+  match '/projects', :to=>'projects#list'
+  match 'projects/new', :to =>'projects#new'
+  root :to =>'projects#list'
+  resources :projects
+
+  #get "projects/new"
+  #get "projects/list"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

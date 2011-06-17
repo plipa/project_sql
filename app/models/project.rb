@@ -1,4 +1,4 @@
-class Projects < ActiveRecord::Base
+class Project < ActiveRecord::Base
   attr_accessor  :name,  :description
 
   attr_accessible :name, :description
