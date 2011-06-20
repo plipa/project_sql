@@ -9,10 +9,10 @@ describe ProjectsController do
     end
 
     before(:each) do
-      @test =  {:name=>"test",:description=>"aaaaaa"}
+      @test =  {:nazwa=>"test",:opis=>"aaaaaa"}
     end
 
-    it "should create a process" do
+    it "should create a project" do
         lambda do
           post :create, :user=>@test
 

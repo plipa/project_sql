@@ -4,17 +4,25 @@ class ProjectsController < ApplicationController
     @p = Project.new
   end
 
-  def list
-    @projects =Project.find_all_by_name :name
+  def index
+    @projects =Project.all
+  end
+
+   def show
+    @project = Project.find(params[:id])
   end
 
   def create
     @project = Project.new(params[:project])
-    if @project.save
-      redirect_to @project
-    else
-      render 'new'
+
+      if @project.save
+
+            redirect_to :action=>'index'
+        else
+
+    redirect_to :action=>'new'
     end
   end
+
 
 end

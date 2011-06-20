@@ -1,7 +1,9 @@
 ProjectSql::Application.routes.draw do
-  match '/projects', :to=>'projects#list'
-  match 'projects/new', :to =>'projects#new'
-  root :to =>'projects#list'
+  #match '/projects', :to=>'projects#list'
+  #match 'projects/new', :to =>'projects#new'
+  #post '/projects', :to=>'projects#create'
+  #match 'projects/create', :to=>'projects#create'
+  #root :to =>'projects#list'
   resources :projects
 
   #get "projects/new"

@@ -12,6 +12,12 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
+        <dependency name="mysql2" version="0.2.7" bound="EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -25,12 +31,6 @@
     <requirement>
       <requirement>
         <dependency name="rspec-rails" version="2.6.1" bound="EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source from="Gemfile" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="sqlite3" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -83,6 +83,8 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] rdoc (v3.6.1, /usr/local/lib/ruby/gems/1.9.1/gems/rdoc-3.6.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v3.0.9, /usr/local/lib/ruby/gems/1.9.1/gems/activeresource-3.0.9)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.9, /usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.0.9)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] mysql2 (v0.3.6, /usr/local/lib/ruby/gems/1.9.1/gems/mysql2-0.3.6)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] mysql2 (v0.2.7, /usr/local/lib/ruby/gems/1.9.1/gems/mysql2-0.2.7)" level="application" />
   </component>
 </module>
 
