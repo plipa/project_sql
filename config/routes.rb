@@ -4,7 +4,9 @@ ProjectSql::Application.routes.draw do
   #post '/projects', :to=>'projects#create'
   #match 'projects/create', :to=>'projects#create'
   #root :to =>'projects#list'
-  resources :projects
+  resources :projects do
+    resources :problem
+  end
 
   #get "projects/new"
   #get "projects/list"

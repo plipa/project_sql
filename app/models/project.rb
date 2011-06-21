@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
-  attr_accessor  :nazwa,  :opis
+    has_many :problems
 
-  attr_accessible :nazwa, :opis
-   validates :nazwa, :presence => true,
-                    :length => {:maximum => 255}
+  validates :nazwa, :presence => true,
+
+                     :length => {:maximum => 255}
 end
