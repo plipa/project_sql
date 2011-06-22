@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110621080412) do
+ActiveRecord::Schema.define(:version => 20110622193948) do
 
   create_table "problems", :force => true do |t|
     t.string   "nazwa"
     t.string   "opis"
     t.integer  "project_id"
-    t.integer  "problem_id"
+    t.integer  "id_problemu"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(:version => 20110621080412) do
   create_table "projects", :force => true do |t|
     t.string   "nazwa"
     t.string   "opis"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "results", :force => true do |t|
+    t.string   "wynik"
+    t.integer  "problem_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

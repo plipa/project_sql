@@ -4,7 +4,7 @@ class CreateProblems < ActiveRecord::Migration
       t.string :nazwa
       t.string :opis
       t.integer :project_id
-      t.integer :problem_id
+      t.integer :id_problemu
       t.timestamps
     end
   end

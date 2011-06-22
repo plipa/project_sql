@@ -6,6 +6,9 @@ ProjectSql::Application.routes.draw do
   #root :to =>'projects#list'
   resources :projects do
     resources :problems do
+      resources :results do
+
+      end
     end
   end
 

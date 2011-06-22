@@ -2,11 +2,11 @@ class ProblemsController < ApplicationController
   def index
     @project = Project.find(params[:project_id])
     #@problem = Problem.find_all_by_project_id(params[:project_id])
-     @problem = Problem.find(:all, :conditions => {:project_id => params[:project_id], :problem_id=>nil})
+     @problem = Problem.find(:all, :conditions => {:project_id => params[:project_id], :id_problemu=>nil})
   end
 
   def index_pod
-       @problem = Problem.find(:all, :conditions => {:project_id => params[:project_id], :problem_id=>params[:problem_id]})
+       @problem = Problem.find(:all, :conditions => {:project_id => params[:project_id], :id_problemu=>params[:problem_id]})
   end
 
   def show
@@ -22,7 +22,7 @@ class ProblemsController < ApplicationController
     @project = Project.find(params[:project_id])
     @problem = Problem.find(params[:problem_id])
     @pod_problem = @project.problem.new
-    @pod_problem.problem_id = @problem.id
+    @pod_problem.id_problemu = @problem.id
   end
 
    def create

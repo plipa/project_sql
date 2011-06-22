@@ -1,0 +1,13 @@
+<h1>Result#new</h1>
+<%= form_for @result, :as=>:result, :url => project_problem_results_path(params[:project_id],params[:problem_id]) do |f| %>
+
+    <div class="field">
+    <%= f.label :wynik %><br />
+    <%= f.text_field :wynik %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Dodaj resultat" %>
+  </div>
+<% end %>
