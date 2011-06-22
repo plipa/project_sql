@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 
    def show
     @project = Project.find(params[:id])
+
   end
 
   def create
@@ -17,7 +18,7 @@ class ProjectsController < ApplicationController
 
       if @project.save
 
-            redirect_to :action=>'index'
+            redirect_to projects_path()
         else
 
     redirect_to :action=>'new'

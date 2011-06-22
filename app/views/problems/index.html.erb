@@ -1,0 +1,17 @@
+<h1>All Problems for project <%= @project.nazwa %></h1>
+<table border="1">
+ <tr>
+  <td width="80%"><p align="center"><i><b>Nazwa projektu</b></i></td>
+  <td width="20%"><p align="center"><i><b>Opis</b></i></td>
+ </tr>
+
+ <% @problem.each do |problem| %>
+  <tr>
+   <td><%= link_to problem.nazwa, :action=>'show', :id=>problem.id %></td>
+   <td><%= problem.opis %></td>
+  </tr>
+ <% end %>
+</table>
+<p><%= link_to "Create new Problem", :action => "new" %></p>
+<br>
+<p><%= link_to "Back to Projects", projects_path() %></p>

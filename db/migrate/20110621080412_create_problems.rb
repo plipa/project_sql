@@ -3,7 +3,8 @@ class CreateProblems < ActiveRecord::Migration
     create_table :problems do |t|
       t.string :nazwa
       t.string :opis
-
+      t.integer :project_id
+      t.integer :problem_id
       t.timestamps
     end
   end

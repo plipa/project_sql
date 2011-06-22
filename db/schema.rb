@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(:version => 20110621080412) do
   create_table "problems", :force => true do |t|
     t.string   "nazwa"
     t.string   "opis"
+    t.integer  "project_id"
+    t.integer  "problem_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

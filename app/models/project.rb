@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
-    has_many :problems
+    has_many :problem
+
 
   validates :nazwa, :presence => true,
 
