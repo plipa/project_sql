@@ -5,8 +5,12 @@ ProjectSql::Application.routes.draw do
   #match 'projects/create', :to=>'projects#create'
   #root :to =>'projects#list'
   resources :projects do
-    resources :problems
+    resources :problems do
+    end
   end
+
+  match '/projects/:project_id/problems/:problem_id/index', :to=>'problems#index_pod'
+  get '/projects/:project_id/problems/:problem_id/new', :to=>'problems#new_pod'
 
   #get "projects/new"
   #get "projects/list"

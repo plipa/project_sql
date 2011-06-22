@@ -1,0 +1,20 @@
+<h1>Problem#new</h1>
+<%= form_for [@project, @pod_problem] do |f| %>
+
+    <div class="field">
+    <%= f.label :nazawa %><br />
+    <%= f.text_field :nazwa %>
+  </div>
+<div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_field :opis %>
+  </div>
+    <div class="field">
+    <%= f.label :problem_id %><br />
+    <%= f.text_field :problem_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Dodaj podproblem" %>
+  </div>
+<% end %>

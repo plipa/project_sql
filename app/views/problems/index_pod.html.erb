@@ -1,4 +1,4 @@
-<h1>All Problems for project <%= @project.nazwa %></h1>
+<h1></h1>
 <table border="1">
  <tr>
   <td width="80%"><p align="center"><i><b>Nazwa projektu</b></i></td>
@@ -7,11 +7,11 @@
 
  <% @problem.each do |problem| %>
   <tr>
-   <td><%= link_to problem.nazwa, :action=>'index_pod', :problem_id=>problem.id %></td>
+   <td><%= link_to problem.nazwa%></td>
    <td><%= problem.opis %></td>
   </tr>
  <% end %>
 </table>
-<p><%= link_to "Create new Problem", :action => "new" %></p>
+<p><%= link_to "Create new Podproblem", :action => "new_pod" %></p>
 <br>
-<p><%= link_to "Back to Projects", projects_path() %></p>
+<p><%= link_to "Back to Problems", project_problems_path(Project.find(params[:project_id])) %></p>
