@@ -1,14 +1,16 @@
 <h1>All Problems for project <%= @project.nazwa %></h1>
 <table border="1">
  <tr>
-  <td width="80%"><p align="center"><i><b>Nazwa projektu</b></i></td>
-  <td width="20%"><p align="center"><i><b>Opis</b></i></td>
+  <td width="40%"><p align="center"><i><b>Nazwa projektu</b></i></td>
+  <td width="40%"><p align="center"><i><b>Opis</b></i></td>
+   <td width="20%"><p align="center"><i><b>Usuń problem</b></i></td>
  </tr>
 
  <% @problem.each do |problem| %>
   <tr>
    <td><%= link_to problem.nazwa, :action=>'index_pod', :problem_id=>problem.id %></td>
    <td><%= problem.opis %></td>
+    <td><%= button_to 'Usuń', project_problem_path(@project.id,problem), :method=>:delete, :class=>:destroy %></td>
   </tr>
  <% end %>
 </table>

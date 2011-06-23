@@ -1,9 +1,10 @@
 <h1></h1>
 <table border="1">
  <tr>
-  <td width="40%"><p align="center"><i><b>Nazwa projektu</b></i></td>
+  <td width="30%"><p align="center"><i><b>Nazwa projektu</b></i></td>
   <td width="40%"><p align="center"><i><b>Opis</b></i></td>
    <td width="20%"><p align="center"><i><b>Resultat</b></i></td>
+   <td width="10%"><p align="center"><i><b>Usuń podproblem</b></i></td>
  </tr>
 
  <% @problem.each do |problem|
@@ -16,7 +17,9 @@
            else
             link_to 'Dodaj resultat', new_project_problem_result_path(params[:project_id],problem.id)
                end %> </td>
+    <td><%= button_to 'Usuń', project_problem_path(@project.id,problem), :method=>:delete, :class=>:destroy %></td>
   </tr>
+
  <% end %>
 </table>
 <p><%= link_to "Create new Podproblem", :action => "new_pod" %></p>

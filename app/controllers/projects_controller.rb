@@ -25,5 +25,9 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def destroy
+           Project.find(params[:id]).destroy
+          redirect_to :action=>'index'
+  end
 
 end

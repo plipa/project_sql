@@ -1,14 +1,16 @@
 <h1>All Projects</h1>
 <table border="1">
  <tr>
-  <td width="80%"><p align="center"><i><b>Nazwa projektu</b></i></td>
-  <td width="20%"><p align="center"><i><b>Opis</b></i></td>
+  <td width="20%"><p align="center"><i><b>Nazwa projektu</b></i></td>
+  <td width="40%"><p align="center"><i><b>Opis</b></i></td>
+  <td width="20%"><p align="center"><i><b>Usuń projekt</b></i></td>
  </tr>
 
  <% @projects.each do |project| %>
   <tr>
    <td><%= link_to project.nazwa,project_problems_path(project) %> </td>
    <td><%= project.opis %></td>
+    <td><%= button_to 'Usuń', project, :method=>:delete, :class=>:destroy %></td>
   </tr>
  <% end %>
 </table>

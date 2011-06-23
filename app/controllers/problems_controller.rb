@@ -6,6 +6,7 @@ class ProblemsController < ApplicationController
   end
 
   def index_pod
+       @project = Project.find(params[:project_id])
        @problem = Problem.find(:all, :conditions => {:project_id => params[:project_id], :id_problemu=>params[:problem_id]})
   end
 
@@ -35,6 +36,11 @@ class ProblemsController < ApplicationController
 
     redirect_to :action=>'new'
     end
+   end
+
+  def destroy
+           Problem.find(params[:id]).destroy
+          redirect_to :action=>'index'
   end
 
 end
