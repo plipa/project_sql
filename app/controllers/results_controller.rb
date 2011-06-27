@@ -21,5 +21,9 @@ class ResultsController < ApplicationController
     @problem = Problem.find(params[:problem_id])
     @result = Result.find_all_by_problem_id(params[:problem_id])
   end
+  def destroy
+           Result.find(params[:id]).destroy
+          redirect_to :action=>'index'
+  end
 
 end

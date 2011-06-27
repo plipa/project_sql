@@ -52,3 +52,7 @@ margin-left:auto;
     background-color: #ff9340;
     padding-left:10px;
 }
+
+.field2{
+    visibility: hidden;
+}

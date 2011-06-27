@@ -1,4 +1,5 @@
-<h1>Projects#new</h1>
+<h1>Dodaj projekt</h1>
+<center>
 <%= form_for(@p) do |f| %>
 
     <% if @p .errors.any? %>
@@ -27,3 +28,4 @@
     <%= f.submit "Dodaj projekt" %>
   </div>
 <% end %>
+    </center>
