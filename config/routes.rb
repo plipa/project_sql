@@ -12,9 +12,10 @@ ProjectSql::Application.routes.draw do
     end
   end
 
+
   match '/projects/:project_id/problems/:problem_id/index', :to=>'problems#index_pod'
   get '/projects/:project_id/problems/:problem_id/new', :to=>'problems#new_pod'
-
+  root :to => 'projects#index'
   #get "projects/new"
   #get "projects/list"
 
