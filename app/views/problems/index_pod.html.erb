@@ -1,5 +1,6 @@
-<h1></h1>
-<table border="1">
+<h1><center>Wszystkie podproblemy problemu - <%= Problem.find(params[:problem_id]).nazwa%></center></h1>
+<p><div class="odstep"><%= link_to "Stwórz nowy podproblem", :action => "new_pod" %></div></p>
+<table class='tab' align="center" cellspacing="0" cellpadding="0">
  <tr>
   <td width="30%"><p align="center"><i><b>Nazwa projektu</b></i></td>
   <td width="40%"><p align="center"><i><b>Opis</b></i></td>
@@ -9,19 +10,14 @@
 
  <% @problem.each do |problem|
        @result = Result.find_by_problem_id(problem.id) %>
-  <tr>
+  <tr class="wiersz">
    <td><%= link_to problem.nazwa%></td>
    <td><%= problem.opis %></td>
-   <td><%= if (!@result.nil?)
-               @result.wynik
-           else
-            link_to 'Dodaj resultat', new_project_problem_result_path(params[:project_id],problem.id)
-               end %> </td>
+   <td><%= link_to 'Resultat', project_problem_results_path(params[:project_id],problem.id) %> </td>
     <td><%= button_to 'Usuń', project_problem_path(@project.id,problem), :method=>:delete, :class=>:destroy %></td>
   </tr>
 
  <% end %>
 </table>
-<p><%= link_to "Create new Podproblem", :action => "new_pod" %></p>
 <br>
-<p><%= link_to "Back to Problems", project_problems_path(Project.find(params[:project_id])) %></p>
+<p><%= link_to "Wróć do problemów", project_problems_path(Project.find(params[:project_id])) %></p>

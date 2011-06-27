@@ -2,8 +2,12 @@
 <%= form_for @result, :as=>:result, :url => project_problem_results_path(params[:project_id],params[:problem_id]) do |f| %>
 
     <div class="field">
-    <%= f.label :wynik %><br />
-    <%= f.text_field :wynik %>
+    <%= f.label :nazwa %><br />
+    <%= f.text_field :nazwa %>
+  </div>
+    <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_field :opis %>
   </div>
 
 

@@ -1,0 +1,20 @@
+<h1>Wszystkie resultaty problemu - <%= @problem.nazwa %></h1>
+<p ><div class="odstep"><%= link_to "Stwórz nowy resultat", :action => "new" %></div></p>
+<table class='tab' align="center" cellspacing="0" cellpadding="0">
+ <tr>
+  <td width="40%"><p align="center"><i><b>Nazwa resulatatu</b></i></td>
+  <td width="40%"><p align="center"><i><b>Opis</b></i></td>
+   <td width="20%"><p align="center"><i><b>Usuń resultat</b></i></td>
+ </tr>
+
+ <% @result.each do |result| %>
+  <tr class="wiersz">
+   <td><%= result.nazwa %></td>
+   <td><%= result.opis %></td>
+    <td><%= button_to 'Usuń', project_problem_result_path(@project.id,@problem.id,result), :method=>:delete, :class=>:destroy %></td>
+  </tr>
+ <% end %>
+</table>
+
+<br>
+<p><%= link_to "Back to Problems", project_problems_path(@project.id) %></p>

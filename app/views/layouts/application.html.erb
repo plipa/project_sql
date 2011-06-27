@@ -2,10 +2,12 @@
 <head>
 <title>Projects | <%= @title %></title>
   <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
 </head>
 <body>
+<div class='content'>
 
 <%= yield %>
-
+</div>
 </body>
 </html>

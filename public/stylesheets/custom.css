@@ -1,0 +1,54 @@
+.content{
+    width:800px;
+    background-color: #8bc0d9;
+    min-height:500px;
+    margin-left:auto;
+    margin-right:auto;
+
+    -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+body{
+    background-color: #c1dae6;
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    color: red;
+
+}
+
+.round,.wiersz,.odstep {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+.tab{
+ width:800px;
+ border: 0px;
+ text-align: center;
+margin-left:auto;
+    margin-right:auto;
+    border-collapse:separate;
+        border-spacing:0 5px;
+
+
+
+}
+
+.wiersz{
+    background-color: #ff9340;
+}
+.odstep{
+    margin-left:70px;
+    width: 250px;
+    background-color: #ff9340;
+    padding-left:10px;
+}

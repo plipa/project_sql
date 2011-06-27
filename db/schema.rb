@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(:version => 20110622193948) do
   end
 
   create_table "results", :force => true do |t|
-    t.string   "wynik"
+    t.string   "nazwa"
+    t.string   "opis"
     t.integer  "problem_id"
     t.datetime "created_at"
     t.datetime "updated_at"

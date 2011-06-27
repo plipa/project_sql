@@ -1,5 +1,6 @@
-<h1>All Problems for project <%= @project.nazwa %></h1>
-<table border="1">
+<h1><center>Wszystkie problemy projektu - <%= @project.nazwa %></center></h1>
+<p><div class="odstep"><%= link_to "Stwórz nowy problem", :action => "new" %></div></p>
+<table class='tab' align="center" cellspacing="0" cellpadding="0">
  <tr>
   <td width="40%"><p align="center"><i><b>Nazwa projektu</b></i></td>
   <td width="40%"><p align="center"><i><b>Opis</b></i></td>
@@ -7,13 +8,13 @@
  </tr>
 
  <% @problem.each do |problem| %>
-  <tr>
+  <tr class="wiersz">
    <td><%= link_to problem.nazwa, :action=>'index_pod', :problem_id=>problem.id %></td>
    <td><%= problem.opis %></td>
     <td><%= button_to 'Usuń', project_problem_path(@project.id,problem), :method=>:delete, :class=>:destroy %></td>
   </tr>
  <% end %>
 </table>
-<p><%= link_to "Create new Problem", :action => "new" %></p>
+
 <br>
 <p><%= link_to "Back to Projects", projects_path() %></p>

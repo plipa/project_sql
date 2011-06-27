@@ -18,7 +18,8 @@ class ProjectsController < ApplicationController
 
       if @project.save
 
-            redirect_to projects_path()
+            #redirect_to projects_path()
+        redirect_to new_project_problem_path(@project.id)
         else
 
     redirect_to :action=>'new'
